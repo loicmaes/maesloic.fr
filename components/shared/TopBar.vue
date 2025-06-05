@@ -37,6 +37,7 @@ const links: {
         {{ $t("name") }}.
       </NuxtLinkLocale>
 
+      <!-- desktop navigation -->
       <nav class="hidden sm:flex items-center gap-1">
         <Button
           v-for="link in links"
@@ -61,6 +62,7 @@ const links: {
           </NuxtLinkLocale>
         </Button>
       </nav>
+      <!-- mobile navigation -->
       <Sheet v-model:open="open">
         <SheetTrigger as-child>
           <Button
