@@ -6,10 +6,8 @@ import TopBar from "~/components/shared/TopBar.vue";
   <div data-layout="default">
     <TopBar />
 
-    <div class="flex justify-center p-4">
-      <div class="w-full max-w-7xl">
-        <NuxtPage />
-      </div>
+    <div class="flex flex-col">
+      <NuxtPage />
     </div>
   </div>
 </template>
