@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Menu } from "lucide-vue-next";
+import { CalendarPlus, Menu } from "lucide-vue-next";
 import { useMediaQuery } from "@vueuse/core";
 import WebContent from "@/components/shared/WebContent.vue";
 
@@ -56,6 +56,7 @@ const links: {
           as-child
         >
           <NuxtLinkLocale to="/contact">
+            <CalendarPlus />
             {{ $t("navigation.lets-meet") }}
           </NuxtLinkLocale>
         </Button>
@@ -112,6 +113,7 @@ const links: {
               @click="open = false"
             >
               <NuxtLinkLocale to="/contact">
+                <CalendarPlus />
                 {{ $t("navigation.lets-meet") }}
               </NuxtLinkLocale>
             </Button>
