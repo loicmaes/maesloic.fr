@@ -3,8 +3,9 @@
 **Éditeur du site**  
 Loïc – Studio Klypi  
 Auto-entrepreneur  
-21 rue Vincent Scotto, 67400 Illkirch-Graffenstaden  
-Email : contact@studio-klypi.com  
+21 rue Vincent Scotto, 67400 Illkirch-Graffenstaden, France  
+Téléphone : +33 3 88 31 53 86  
+E-mail : contact@studio-klypi.com  
 SIRET : 910 637 180 00019
 
 **Directeur de la publication**  
