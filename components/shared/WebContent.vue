@@ -10,7 +10,7 @@ const props = defineProps<{
 <template>
   <div
     :class="cn(
-      'm-4 w-full max-w-7xl mx-auto',
+      'p-4 w-full max-w-7xl mx-auto',
       'grid gap-8',
       props.class,
     )"
