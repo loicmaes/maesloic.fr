@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Menu } from "lucide-vue-next";
 import { useMediaQuery } from "@vueuse/core";
+import WebContent from "@/components/shared/WebContent.vue";
 
 const open = ref<boolean>(false);
 const isDesktop = useMediaQuery("(min-width: 40rem)");
@@ -27,8 +28,8 @@ const links: {
 </script>
 
 <template>
-  <header class="sticky top-0 bg-background h-16 flex items-center justify-center px-4">
-    <div class="w-full max-w-7xl flex items-center justify-between gap-12">
+  <header class="sticky top-0 bg-background h-16 flex items-center justify-center px-4 border-b">
+    <WebContent class="flex items-center justify-between gap-12">
       <NuxtLinkLocale
         to="/"
         class="text-lg font-bold"
@@ -117,6 +118,6 @@ const links: {
           </div>
         </SheetContent>
       </Sheet>
-    </div>
+    </WebContent>
   </header>
 </template>
