@@ -31,6 +31,7 @@
     "lucide-vue-next": "^0.513.0",
     "nuxt": "^3.17.5",
     "pinia": "^3.0.3",
+    "reka-ui": "^2.3.0",
     "shadcn-nuxt": "2.2.0",
     "tailwind-merge": "^3.3.0",
     "tailwindcss": "^4.1.8",
