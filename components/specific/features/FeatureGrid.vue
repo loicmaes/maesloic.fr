@@ -6,8 +6,8 @@ withDefaults(defineProps<{
   features?: {
     icon?: LucideIcon;
     name: string;
-  };
-}>(), {
+  }[];
+}>(), () => ({
   features: [
     {
       icon: Globe,
@@ -26,7 +26,7 @@ withDefaults(defineProps<{
       name: "pretty-code",
     },
   ],
-});
+}));
 </script>
 
 <template>
