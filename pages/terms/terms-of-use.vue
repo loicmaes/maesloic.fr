@@ -1,6 +1,11 @@
 <script setup lang="ts">
+const { t } = useI18n();
+
 definePageMeta({
   layout: "legal",
+});
+useHead({
+  title: t("terms.tou.title"),
 });
 </script>
 
