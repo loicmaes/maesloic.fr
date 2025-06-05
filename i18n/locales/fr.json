@@ -1,4 +1,10 @@
 {
-  "hello-world": "Bonjour monde"
+  "name": "Loïc",
+  "navigation": {
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "services": "Services",
+    "lets-meet": "On se rencontre"
+  }
 }
 
