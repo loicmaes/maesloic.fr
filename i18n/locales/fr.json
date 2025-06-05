@@ -1,10 +1,53 @@
 {
   "name": "Loïc",
   "navigation": {
+    "home": "Accueil",
     "portfolio": "Portfolio",
     "blog": "Blog",
     "services": "Services",
     "lets-meet": "On se rencontre"
+  },
+  "home": {
+    "hero": {
+      "title": "Développeur web full-stack",
+      "caption": "Je construis des expériences web simples, durables et percutantes."
+    },
+    "what-i-do": {
+      "title": "Je propose",
+      "features": {
+        "web-sites": {
+          "title": "Performance et adaptabilité avant tout",
+          "caption": "Des sites rapides, accessibles et fluides sur tous les supports."
+        },
+        "pwa": {
+          "title": "Applications web modernes",
+          "caption": "SaaS, PWA ou outils métiers : je conçois des apps fiables et scalables."
+        },
+        "user-based": {
+          "title": "Design pensé pour l’usage",
+          "caption": "Des interfaces simples et efficaces, centrées sur l’utilisateur."
+        },
+        "pretty-code": {
+          "title": "Code propre et durable",
+          "caption": "Un code lisible, maintenable et éthique, prêt pour la suite."
+        }
+      }
+    },
+    "featured-projects": {
+      "title": "Projets en vedette"
+    },
+    "testimonials": {
+      "title": "Témoignages"
+    },
+    "cta": {
+      "title": "Prêt à donner vie à ton projet ?",
+      "caption": {
+        "line-1": "Que tu aies une idée bien définie ou simplement l’envie de créer quelque chose de solide, je suis là pour t'accompagner.",
+        "line-2": "Je conçois des sites, des applications et des expériences digitales avec une attention particulière à la performance, à la clarté et à l’impact.",
+        "line-end": "Tu avez un besoin précis ou juste une intuition ? Écrivons-nous. On prendra le temps de poser les bonnes bases et de réfléchir ensemble à une solution simple, efficace et sur-mesure."
+      },
+      "action": "On se rencontre"
+    }
   }
 }
 
