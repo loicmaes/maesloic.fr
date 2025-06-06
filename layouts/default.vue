@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TopBar from "~/components/shared/TopBar.vue";
+import TopBar from "~/components/shared/layout/TopBar.vue";
 </script>
 
 <template>

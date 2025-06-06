@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { CalendarPlus, Menu } from "lucide-vue-next";
 import { useMediaQuery } from "@vueuse/core";
-import WebContent from "@/components/shared/WebContent.vue";
+import WebContent from "~/components/shared/layout/WebContent.vue";
 
 const open = ref<boolean>(false);
 const isDesktop = useMediaQuery("(min-width: 40rem)");

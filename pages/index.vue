@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { CalendarPlus } from "lucide-vue-next";
 import FeatureGrid from "@/components/specific/features/FeatureGrid.vue";
-import WebContent from "~/components/shared/WebContent.vue";
+import WebContent from "~/components/shared/layout/WebContent.vue";
 
 const projects = computed(() => []);
 const testimonials = computed(() => []);

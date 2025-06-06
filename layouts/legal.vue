@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ArrowLeft } from "lucide-vue-next";
-import WebContent from "~/components/shared/WebContent.vue";
+import WebContent from "~/components/shared/layout/WebContent.vue";
 
 const { locale, defaultLocale } = useI18n();
 const displayInfo = computed(() => locale.value !== defaultLocale);
