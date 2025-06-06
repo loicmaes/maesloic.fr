@@ -70,14 +70,10 @@ const testimonials = computed(() => []);
             {{ $t("home.cta.title") }}
           </h2>
           <div class="mt-6 flex max-w-[55ch] flex-col gap-3">
-            <p>
-              {{ $t("home.cta.caption.line-1") }}
-            </p>
-            <p>
-              {{ $t("home.cta.caption.line-2") }}
-            </p>
-            <p class=" mt-3">
-              {{ $t("home.cta.caption.line-end") }}
+            <p v-for="(line, index) in $tm('home.cta.caption')" :class="{
+              'mt-3': index === $tm('home.cta.caption').length - 1,
+            }">
+              <i18n-t :keypath="`home.cta.caption[${index}]`" />
             </p>
           </div>
 

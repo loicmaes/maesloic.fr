@@ -41,11 +41,11 @@
     },
     "cta": {
       "title": "Prêt à donner vie à ton projet ?",
-      "caption": {
-        "line-1": "Que tu aies une idée bien définie ou simplement l’envie de créer quelque chose de solide, je suis là pour t'accompagner.",
-        "line-2": "Je conçois des sites, des applications et des expériences digitales avec une attention particulière à la performance, à la clarté et à l’impact.",
-        "line-end": "Tu avez un besoin précis ou juste une intuition ? Écrivons-nous. On prendra le temps de poser les bonnes bases et de réfléchir ensemble à une solution simple, efficace et sur-mesure."
-      },
+      "caption": [
+        "Que tu aies une idée bien définie ou simplement l’envie de créer quelque chose de solide, je suis là pour t'accompagner.",
+        "Je conçois des sites, des applications et des expériences digitales avec une attention particulière à la performance, à la clarté et à l’impact.",
+        "Tu avez un besoin précis ou juste une intuition ? Écrivons-nous. On prendra le temps de poser les bonnes bases et de réfléchir ensemble à une solution simple, efficace et sur-mesure."
+      ],
       "action": "On se rencontre"
     }
   },
