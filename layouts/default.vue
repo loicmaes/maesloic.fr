@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import TopBar from "~/components/shared/layout/TopBar.vue";
+import BottomBar from "~/components/shared/layout/BottomBar.vue";
 </script>
 
 <template>
@@ -8,6 +9,8 @@ import TopBar from "~/components/shared/layout/TopBar.vue";
 
     <div class="flex flex-col">
       <NuxtPage />
+
+      <BottomBar />
     </div>
   </div>
 </template>
