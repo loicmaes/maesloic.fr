@@ -24,6 +24,10 @@ const links: {
     label: "services",
     path: "/services",
   },
+  {
+    label: "about",
+    path: "/about",
+  },
 ];
 </script>
 
