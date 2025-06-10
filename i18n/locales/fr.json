@@ -1,4 +1,190 @@
 {
-  "hello-world": "Bonjour monde"
+  "name": "Loïc",
+  "navigation": {
+    "home": "Accueil",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "services": "Services",
+    "about": "À propos",
+    "lets-meet": "On se rencontre"
+  },
+  "footer": {
+    "rights": "{name} MAES © {start} | {name} MAES © {start} - {end}",
+    "legal-notice": "Mentions légales",
+    "terms-of-use": "CGU",
+    "terms-of-sale": "CGV",
+    "privacy": "Confidentialité"
+  },
+  "home": {
+    "hero": {
+      "title": "Développeur web full-stack",
+      "caption": "Je construis des expériences web simples, durables et percutantes."
+    },
+    "what-i-do": {
+      "title": "Je propose",
+      "features": {
+        "web-sites": {
+          "title": "Performance et adaptabilité avant tout",
+          "caption": "Des sites rapides, accessibles et fluides sur tous les supports."
+        },
+        "pwa": {
+          "title": "Applications web modernes",
+          "caption": "SaaS, PWA ou outils métiers : je conçois des apps fiables et scalables."
+        },
+        "user-based": {
+          "title": "Design pensé pour l’usage",
+          "caption": "Des interfaces simples et efficaces, centrées sur l’utilisateur."
+        },
+        "pretty-code": {
+          "title": "Code propre et durable",
+          "caption": "Un code lisible, maintenable et éthique, prêt pour la suite."
+        }
+      }
+    },
+    "featured-projects": {
+      "title": "Projets en vedette"
+    },
+    "testimonials": {
+      "title": "Témoignages"
+    },
+    "cta": {
+      "title": "Prêt à donner vie à ton projet ?",
+      "caption": [
+        "Que tu aies une idée bien définie ou simplement l’envie de créer quelque chose de solide, je suis là pour t'accompagner.",
+        "Je conçois des sites, des applications et des expériences digitales avec une attention particulière à la performance, à la clarté et à l’impact.",
+        "Tu avez un besoin précis ou juste une intuition ? Écrivons-nous. On prendra le temps de poser les bonnes bases et de réfléchir ensemble à une solution simple, efficace et sur-mesure."
+      ],
+      "action": "On se rencontre"
+    }
+  },
+  "terms": {
+    "btn": {
+      "back-to-home": "Retour à l'accueil"
+    },
+    "legal-notice": {
+      "title": "Mentions légales",
+      "editor": {
+        "title": "Éditeur du site",
+        "data": [
+          "Loïc MAES - Studio Klypi",
+          "Auto-entrepreneur",
+          "21 rue Vincent Scotto, 67400 Illkirch-Graffenstaden, France",
+          "Téléphone : {phone}",
+          "E-mail : {email}",
+          "SIRET : 910 637 180 00019"
+        ]
+      },
+      "director": {
+        "title": "Directeur de la publication",
+        "data": "Loïc MAES"
+      },
+      "host": {
+        "title": "Hébergeur",
+        "data": [
+          "OVH",
+          "2 rue Kellermann, 59100 Roubaix, France",
+          "Site web : {link}"
+        ]
+      },
+      "owning": "Le site {link} est la propriété exclusive de Studio Klypi. Toute reproduction ou représentation, intégrale ou partielle, est interdite sans autorisation écrite préalable.",
+      "info": "Cette traduction est fournie à titre informatif uniquement. En cas de conflit, la version française originale prévaut."
+    },
+    "privacy": {
+      "title": "Politique de confidentialité",
+      "intro": [
+        "Studio Klypi attache une grande importance à la confidentialité de vos données.",
+        "Cette politique explique quelles données sont collectées, comment elles sont utilisées et vos droits."
+      ],
+      "collected-data": {
+        "title": "1. Données collectées",
+        "paragraph": "Lors de l’envoi d’un message via le formulaire de contact, nous collectons :",
+        "list": [
+          "Prénom",
+          "Adresse e-mail"
+        ]
+      },
+      "finality": {
+        "title": "2. Finalité de la collecte",
+        "data": "Ces données sont utilisées uniquement pour répondre à votre demande de contact."
+      },
+      "conservation": {
+        "title": "3. Conservation des données",
+        "data": "Les données sont conservées pendant une durée maximale de 12 mois, sauf demande de suppression."
+      },
+      "your-rights": {
+        "title": "4. Vos droits",
+        "data": [
+          "Conformément au RGPD, vous disposez d’un droit d’accès, de rectification, de suppression et d’opposition.",
+          "Pour exercer ces droits : {email}"
+        ]
+      },
+      "cookies": {
+        "title": "5. Cookies",
+        "data": "Aucun cookie n’est utilisé à des fins d’analyse ou de tracking. Cette politique sera mise à jour si cela change."
+      },
+      "security": {
+        "title": "6. Sécurité",
+        "data": "Les données personnelles sont traitées de manière confidentielle et sécurisée."
+      }
+    },
+    "tou": {
+      "title": "Conditions Générales d'Utilisation",
+      "object": {
+        "title": "1. Objet",
+        "data": "Les présentes CGU ont pour objet d’encadrer l’accès et l’utilisation du site www.maesloic.fr."
+      },
+      "access": {
+        "title": "2. Accès au site",
+        "data": "L’accès au site est libre. L’utilisateur s’engage à un usage conforme à la législation française."
+      },
+      "intellectual-property": {
+        "title": "3. Propriété intellectuelle",
+        "data": "L’ensemble des contenus présents sur le site (textes, images, code, etc.) est protégé par le droit de la propriété intellectuelle. Toute reproduction est interdite sans autorisation."
+      },
+      "responsability": {
+        "title": "4. Responsabilité",
+        "data": "Studio Klypi s’efforce de maintenir un site fiable et accessible, mais ne peut garantir l’absence totale d’erreurs ou d’interruptions."
+      },
+      "updates": {
+        "title": "5. Modification des CGU",
+        "data": "Studio Klypi se réserve le droit de modifier les présentes CGU à tout moment, sans préavis."
+      },
+      "applicable-law": {
+        "title": "6. Loi applicable",
+        "data": "Les CGU sont régies par la loi française. En cas de litige, les tribunaux compétents seront ceux de Strasbourg."
+      }
+    },
+    "tos": {
+      "title": "Conditions Générales de Vente",
+      "services": {
+        "title": "1. Prestations proposées",
+        "data": "Studio Klypi propose des prestations de services dans le domaine du développement web et de la création numérique."
+      },
+      "price": {
+        "title": "2. Prix",
+        "data": "Les prestations font l’objet d’un devis personnalisé. Les prix sont indiqués en euros hors taxes (HT)."
+      },
+      "order-payment": {
+        "title": "3. Command et paiement",
+        "data": "La commande est validée après acceptation écrite du devis. Un acompte peut être demandé. Le paiement s’effectue selon les modalités convenues (virement bancaire, etc.)."
+      },
+      "delays": {
+        "title": "4. Délais",
+        "data": "Les délais sont donnés à titre indicatif. Studio Klypi s’engage à informer le client en cas de retard."
+      },
+      "retractation": {
+        "title": "5. Rétractation",
+        "data": "Conformément à l’article L221-28 du Code de la consommation, le droit de rétractation ne s’applique pas aux prestations personnalisées commencées avec l’accord du client."
+      },
+      "responsability": {
+        "title": "6. Responsabilité",
+        "data": "Studio Klypi ne saurait être tenu responsable des dommages indirects liés à l’utilisation des livrables."
+      },
+      "conflicts": {
+        "title": "7. Litiges",
+        "data": "En cas de litige, une solution amiable sera recherchée. À défaut, les litiges relèveront des tribunaux compétents de Strasbourg."
+      }
+    }
+  }
 }
 

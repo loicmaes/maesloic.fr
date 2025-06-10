@@ -2,11 +2,15 @@
   "name": "maesloic.fr",
   "version": "0.1.0",
   "author": "Loïc MAES",
-  "description": "Discover my digitale profile in a simple way.",
+  "description": "Discover my digital profile in a simple way.",
   "private": true,
   "type": "module",
   "engines": {
     "node": ">=22"
+  },
+  "prisma": {
+    "schema": "./prisma/schema.prisma",
+    "seed": "tsx ./prisma/seed.ts"
   },
   "packageManager": "yarn@1.22.22",
   "scripts": {
@@ -15,7 +19,12 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "eslint . --fix"
+    "lint": "eslint . --fix",
+    "db:studio": "prisma studio",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev --name",
+    "db:deploy": "prisma migrate deploy",
+    "db:seed": "prisma db seed"
   },
   "dependencies": {
     "@nuxt/eslint": "1.4.1",
@@ -24,13 +33,16 @@
     "@nuxtjs/google-fonts": "3.2.0",
     "@nuxtjs/i18n": "9.5.5",
     "@pinia/nuxt": "0.11.1",
+    "@prisma/client": "^6.9.0",
     "@tailwindcss/vite": "^4.1.8",
+    "@vueuse/core": "^13.3.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "eslint": "^9.0.0",
     "lucide-vue-next": "^0.513.0",
     "nuxt": "^3.17.5",
     "pinia": "^3.0.3",
+    "reka-ui": "^2.3.1",
     "shadcn-nuxt": "2.2.0",
     "tailwind-merge": "^3.3.0",
     "tailwindcss": "^4.1.8",
@@ -39,6 +51,8 @@
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
+    "prisma": "^6.9.0",
+    "tsx": "^4.19.4",
     "typescript": "^5.8.3",
     "vite-plugin-eslint2": "^5.0.3"
   }

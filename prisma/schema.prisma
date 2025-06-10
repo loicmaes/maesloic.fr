@@ -1,0 +1,18 @@
+generator client {
+  provider = "prisma-client-js"
+  // output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Service {
+  id         Int       @id @default(autoincrement())
+  title      String
+  caption    String
+  icon       String
+  displayed  Boolean   @default(false)
+  archivedAt DateTime?
+}
