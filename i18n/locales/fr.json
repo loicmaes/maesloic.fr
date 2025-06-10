@@ -185,6 +185,15 @@
         "data": "En cas de litige, une solution amiable sera recherchée. À défaut, les litiges relèveront des tribunaux compétents de Strasbourg."
       }
     }
+  },
+  "admin": {
+    "navigation": {
+      "dashboard": "Tableau de bord",
+      "service": {
+        "DEFAULT": "Prestation",
+        "services": "Services"
+      }
+    }
   }
 }
 
