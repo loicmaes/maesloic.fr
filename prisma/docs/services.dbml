@@ -1,0 +1,8 @@
+Table Service {
+  id int pk
+  title string
+  caption string
+  icon string
+  displayed boolean [default: false]
+  archivedAt datetime [null]
+}
