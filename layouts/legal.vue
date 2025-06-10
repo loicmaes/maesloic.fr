@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ArrowLeft } from "lucide-vue-next";
+import { Home } from "lucide-vue-next";
 import WebContent from "~/components/shared/layout/WebContent.vue";
 import BottomBar from "~/components/shared/layout/BottomBar.vue";
 
@@ -11,13 +11,14 @@ const displayInfo = computed(() => locale.value !== defaultLocale);
   <div data-layout="legal">
     <WebContent class="py-12 max-w-[60ch]">
       <Button
-        size="sm"
+        size="icon"
         variant="ghost"
-        class="w-min"
-        @click="useRouter().back()"
+        as-child
       >
-        <ArrowLeft />
-        Retour
+        <NuxtLinkLocale to="/">
+          <Home />
+          <span class="sr-only">{{ $t("terms.btn.back-to-home") }}</span>
+        </NuxtLinkLocale>
       </Button>
 
       <NuxtPage />

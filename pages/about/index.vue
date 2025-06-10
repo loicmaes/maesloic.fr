@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <main data-page="contact">
-    contact
+  <main data-page="about">
+    about
   </main>
 </template>

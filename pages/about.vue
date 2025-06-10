@@ -3,7 +3,5 @@
 </script>
 
 <template>
-  <main data-page="about">
-    about
-  </main>
+  <NuxtPage />
 </template>

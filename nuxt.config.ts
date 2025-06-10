@@ -21,6 +21,11 @@ export default defineNuxtConfig({
     classPrefix: "",
     classSuffix: "",
   },
+  runtimeConfig: {
+    api: {
+      key: "",
+    },
+  },
   compatibilityDate: "2025-05-15",
   vite: {
     plugins: [
