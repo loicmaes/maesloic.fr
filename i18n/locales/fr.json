@@ -57,6 +57,9 @@
     }
   },
   "terms": {
+    "btn": {
+      "back-to-home": "Retour à l'accueil"
+    },
     "legal-notice": {
       "title": "Mentions légales",
       "editor": {
