@@ -8,7 +8,7 @@ withDefaults(defineProps<{
     name: string;
   }[];
 }>(), {
-  features: [
+  features: () => [
     {
       icon: Globe,
       name: "web-sites",
