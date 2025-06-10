@@ -1,9 +1,9 @@
-import type { TNullable } from "~/types/generics";
+import type { TNullable, Translation } from "~/types/generics";
 
 export interface IService {
   id: number;
-  title: string;
-  caption: string;
+  title: Translation;
+  caption: Translation;
   icon: string;
   displayed: boolean;
   archivedAt?: TNullable<Date>;
