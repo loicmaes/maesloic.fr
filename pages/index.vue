@@ -3,8 +3,10 @@ import { CalendarPlus } from "lucide-vue-next";
 import FeatureGrid from "@/components/specific/features/FeatureGrid.vue";
 import WebContent from "~/components/shared/layout/WebContent.vue";
 
-const projects = computed(() => []);
-const testimonials = computed(() => []);
+const store = usePublicStore();
+const { services, projects, testimonials } = storeToRefs(store);
+
+store.loadServices();
 </script>
 
 <template>
@@ -33,7 +35,7 @@ const testimonials = computed(() => []);
         </header>
 
         <main>
-          <FeatureGrid />
+          <FeatureGrid :features="services" />
         </main>
       </WebContent>
     </section>
@@ -84,14 +86,9 @@ const testimonials = computed(() => []);
             </p>
           </div>
 
-          <Button
-            class="mt-8"
-            as-child
-          >
-            <NuxtLinkLocale to="/contact">
-              <CalendarPlus />
-              {{ $t("home.cta.action") }}
-            </NuxtLinkLocale>
+          <Button class="mt-8">
+            <CalendarPlus />
+            {{ $t("home.cta.action") }}
           </Button>
         </section>
         <section class="grid place-items-center text-xs text-muted-foreground opacity-50">

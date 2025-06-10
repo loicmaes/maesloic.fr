@@ -52,14 +52,9 @@ const links: {
             {{ $t(`navigation.${link.label}`) }}
           </NuxtLinkLocale>
         </Button>
-        <Button
-          class="ml-7"
-          as-child
-        >
-          <NuxtLinkLocale to="/contact">
-            <CalendarPlus />
-            {{ $t("navigation.lets-meet") }}
-          </NuxtLinkLocale>
+        <Button class="ml-7">
+          <CalendarPlus />
+          {{ $t("navigation.lets-meet") }}
         </Button>
       </nav>
       <!-- mobile navigation -->
@@ -111,13 +106,10 @@ const links: {
             </Button>
             <Button
               class="mt-auto justify-start"
-              as-child
               @click="open = false"
             >
-              <NuxtLinkLocale to="/contact">
-                <CalendarPlus />
-                {{ $t("navigation.lets-meet") }}
-              </NuxtLinkLocale>
+              <CalendarPlus />
+              {{ $t("navigation.lets-meet") }}
             </Button>
           </div>
         </SheetContent>

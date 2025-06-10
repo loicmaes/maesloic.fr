@@ -1,28 +1,30 @@
 <script setup lang="ts">
-import type { LucideIcon } from "lucide-vue-next";
+import * as icons from "lucide-vue-next";
+import type { IService } from "~/types/services";
 
-defineProps<{
-  feature: {
-    icon?: LucideIcon;
-    name: string;
-  };
+const { locale } = useI18n();
+
+const props = defineProps<{
+  feature: IService;
 }>();
+
+const icon = computed(() => icons[props.feature.icon as keyof typeof icons]);
 </script>
 
 <template>
   <Card
-    :id="feature.name"
+    :id="feature.id"
     class="p-6"
   >
     <div class="flex">
       <component
-        :is="feature.icon"
-        v-if="feature.icon"
+        :is="icon"
+        v-if="icon"
         class="size-6"
       />
       <CardHeader class="w-full">
-        <CardTitle>{{ $t(`home.what-i-do.features.${feature.name}.title`) }}</CardTitle>
-        <CardDescription>{{ $t(`home.what-i-do.features.${feature.name}.caption`) }}</CardDescription>
+        <CardTitle>{{ feature.title[locale] }}</CardTitle>
+        <CardDescription>{{ feature.caption[locale] }}</CardDescription>
       </CardHeader>
     </div>
   </Card>
