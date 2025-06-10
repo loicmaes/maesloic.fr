@@ -10,9 +10,8 @@ const testimonials = computed(() => []);
 <template>
   <main data-page="home">
     <section id="hero">
-      <WebContent class="min-h-[75dvh] grid place-items-center">
+      <WebContent class="min-h-[80dvh] grid place-items-center">
         <div class="w-full md:w-2/3 text-center">
-          <span class="text-muted-foreground">{{ $t("name") }},</span>
           <h1 class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold text-balance leading-none">
             {{ $t("home.hero.title") }}
           </h1>
@@ -27,8 +26,8 @@ const testimonials = computed(() => []);
       class="py-16"
     >
       <WebContent>
-        <header>
-          <h2 class="text-3xl md:text-5xl font-bold">
+        <header class="max-w-[55ch]">
+          <h2 class="text-3xl md:text-5xl font-bold text-balance">
             {{ $t("home.what-i-do.title") }}
           </h2>
         </header>
@@ -44,8 +43,8 @@ const testimonials = computed(() => []);
       class="py-32 bg-accent text-accent-foreground"
     >
       <WebContent>
-        <header>
-          <h2 class="text-3xl md:text-5xl font-bold">
+        <header class="max-w-[55ch]">
+          <h2 class="text-3xl md:text-5xl font-bold text-balance">
             {{ $t("home.featured-projects.title") }}
           </h2>
         </header>
@@ -56,23 +55,31 @@ const testimonials = computed(() => []);
       class="py-16"
     >
       <WebContent>
-        <header>
-          <h2 class="text-3xl md:text-5xl font-bold">
+        <header class="max-w-[55ch]">
+          <h2 class="text-3xl md:text-5xl font-bold text-balance">
             {{ $t("home.testimonials.title") }}
           </h2>
         </header>
       </WebContent>
     </section>
     <section class="py-32 bg-accent text-accent-foreground">
-      <WebContent>
-        <header>
-          <h2 class="text-3xl md:text-5xl font-bold">
-            {{ $t("home.cta.title") }}
-          </h2>
-          <div class="mt-6 flex max-w-[55ch] flex-col gap-3">
-            <p v-for="(line, index) in $tm('home.cta.caption')" :class="{
-              'mt-3': index === $tm('home.cta.caption').length - 1,
-            }">
+      <WebContent class="md:grid-cols-2 lg:grid-cols-[55ch_auto]">
+        <section>
+          <header>
+            <h2 class="text-3xl md:text-5xl font-bold text-balance">
+              {{ $t("home.cta.title") }}
+            </h2>
+          </header>
+
+          <div class="mt-6 flex flex-col gap-3">
+            <p
+              v-for="(line, index) in $tm('home.cta.caption')"
+              :key="index"
+              class="text-balance"
+              :class="{
+                'mt-3': index === $tm('home.cta.caption').length - 1,
+              }"
+            >
               <i18n-t :keypath="`home.cta.caption[${index}]`" />
             </p>
           </div>
@@ -86,7 +93,10 @@ const testimonials = computed(() => []);
               {{ $t("home.cta.action") }}
             </NuxtLinkLocale>
           </Button>
-        </header>
+        </section>
+        <section class="grid place-items-center text-xs text-muted-foreground opacity-50">
+          illustration
+        </section>
       </WebContent>
     </section>
   </main>
