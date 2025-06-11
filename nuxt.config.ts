@@ -63,7 +63,7 @@ export default defineNuxtConfig({
     strategy: "prefix_except_default",
   },
   pinia: {
-    storesDirs: ["./stores/**"],
+    storesDirs: ["./stores/**", "./stores/admin/**"],
   },
   shadcn: {
     prefix: "",

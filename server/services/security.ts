@@ -1,10 +1,16 @@
 import type { HttpCallback, HttpErrorData, HttpEvent, HttpStatus, LmError } from "~/types/generics";
-import { LmForbiddenError } from "~/types/generics";
+import { LmUnauthorizedError, LmForbiddenError } from "~/types/generics";
 
 export async function protect(event: HttpEvent, callback: HttpCallback) {
   const key = event.headers.get("ADMIN_KEY");
-  if (!key) return handleException(event, new LmForbiddenError("Missing admin key!"));
+  if (!key)
+    return handleException(event, new LmUnauthorizedError("Missing admin key!"));
 
+  const { api } = useRuntimeConfig();
+  if (key !== api.key)
+    return handleException(event, new LmForbiddenError("Admin key is not correct!"));
+
+  event.context.key = key;
   return callback(event);
 }
 
