@@ -10,14 +10,6 @@ interface AdminServicesState {
   };
 }
 
-const headers = (): Record<string, string> => {
-  const key = useRoute().params.key as string;
-
-  return {
-    ADMIN_KEY: key,
-  } as Record<string, string>;
-};
-
 export const useServicesStore = defineStore("services", {
   state: (): AdminServicesState => ({
     services: [],
@@ -37,7 +29,7 @@ export const useServicesStore = defineStore("services", {
 
       try {
         const { data } = await useFetch<AdminListReturn<IService>>(`/api/admin/services/list`, {
-          headers: headers(),
+          headers: useAdminHeaders(),
         });
         if (!data.value) return;
         this.services = data.value.data;
@@ -56,7 +48,7 @@ export const useServicesStore = defineStore("services", {
       try {
         const service = await $fetch<IService>("/api/admin/services/create", {
           method: "POST",
-          headers: headers(),
+          headers: useAdminHeaders(),
           body: data,
         });
 
@@ -80,7 +72,7 @@ export const useServicesStore = defineStore("services", {
       try {
         const service = await $fetch<IService>(`/api/admin/services/${id}/update`, {
           method: "PUT",
-          headers: headers(),
+          headers: useAdminHeaders(),
           body: data,
         });
 
@@ -101,7 +93,7 @@ export const useServicesStore = defineStore("services", {
     async updateVisibility(id: number, displayed: boolean) {
       toast.promise($fetch<IService>(`/api/admin/services/${id}/update`, {
         method: "PUT",
-        headers: headers(),
+        headers: useAdminHeaders(),
         body: {
           displayed,
         },
@@ -117,7 +109,7 @@ export const useServicesStore = defineStore("services", {
     async archive(id: number) {
       toast.promise($fetch<IService>(`/api/admin/services/${id}/archive`, {
         method: "DELETE",
-        headers: headers(),
+        headers: useAdminHeaders(),
       }), {
         loading: this.translate("toasters.in-progress.archiving"),
         success: (service: IService) => {
@@ -130,7 +122,7 @@ export const useServicesStore = defineStore("services", {
     async restore(id: number) {
       toast.promise($fetch<IService>(`/api/admin/services/${id}/restore`, {
         method: "PATCH",
-        headers: headers(),
+        headers: useAdminHeaders(),
       }), {
         loading: this.translate("toasters.in-progress.restoring"),
         success: (service: IService) => {

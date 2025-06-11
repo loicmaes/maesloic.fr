@@ -10,6 +10,7 @@ export async function protect(event: HttpEvent, callback: HttpCallback) {
   if (key !== api.key)
     return handleException(event, new LmForbiddenError("Admin key is not correct!"));
 
+  event.context.key = key;
   return callback(event);
 }
 
