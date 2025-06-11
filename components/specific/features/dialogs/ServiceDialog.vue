@@ -3,10 +3,13 @@ import { toTypedSchema } from "@vee-validate/zod";
 import { z } from "zod";
 import { useForm } from "vee-validate";
 import { Save, Plus, LoaderCircle } from "lucide-vue-next";
+import { useVirtualList } from "@vueuse/core";
 import type { IService, IServiceCreate, IServiceUpdate } from "~/types/services";
+import Icon from "~/components/shared/icons/Icon.vue";
 
 const { locale, availableLocales } = useI18n();
 const selectedLanguage = ref<string>(locale.value);
+const icons = useAvailableIcons();
 
 const open = defineModel<boolean>("open");
 watch(open, (val) => {
@@ -27,6 +30,7 @@ const props = withDefaults(defineProps<{
 const editMode = computed((): boolean => !!props.service);
 
 const schema = toTypedSchema(z.object({
+  icon: z.string(),
   title: useTranslations(),
   caption: useTranslations(),
   displayed: z.boolean().optional(),
@@ -34,6 +38,7 @@ const schema = toTypedSchema(z.object({
 const form = useForm({
   validationSchema: schema,
   initialValues: {
+    icon: props.service ? props.service.icon : icons[0],
     title: props.service ? { ...props.service.title } : undefined,
     caption: props.service ? { ...props.service.caption } : undefined,
     displayed: props.service?.displayed ?? false,
@@ -93,6 +98,32 @@ async function createService(data: IServiceCreate) {
           </Button>
         </header>
 
+        <FormField
+          v-slot="{ value, componentField }"
+          name="icon"
+        >
+          <FormItem>
+            <FormLabel>Icon</FormLabel>
+            <FormControl v-bind="componentField">
+              <Select>
+                <SelectTrigger class="w-full">
+                  <Icon :name="value" />
+                  <SelectValue class="flex-1" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem
+                    v-for="icon in icons"
+                    :key="icon"
+                    :value="icon"
+                  >
+                    <Icon :name="icon" />
+                    {{ icon }}
+                  </SelectItem>
+                </SelectContent>
+              </Select>
+            </FormControl>
+          </FormItem>
+        </FormField>
         <FormField name="title">
           <FormItem>
             <FormLabel>{{ $t("admin.services.dialog.form.title") }}</FormLabel>
