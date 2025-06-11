@@ -1,5 +1,21 @@
 {
   "name": "Loïc",
+  "labels": {
+    "displayed": "Affiché | Affichée",
+    "hidden": "Caché | Cachée",
+    "archived": "Archivé | Archivée",
+    "languages": {
+      "fr": "Français"
+    }
+  },
+  "form": {
+    "missing-locales": "Langue manquante : {languages} | Langues manquantes : {languages}"
+  },
+  "btn": {
+    "save": "Enregistrer",
+    "new": "Nouveau",
+    "add": "Ajouter"
+  },
   "navigation": {
     "home": "Accueil",
     "portfolio": "Portfolio",
@@ -8,54 +24,28 @@
     "about": "À propos",
     "lets-meet": "On se rencontre"
   },
+  "toasters": {
+    "in-progress": {
+      "saving": "Sauvegarde en cours...",
+      "archiving": "Archivage en cours...",
+      "restoring": "Restauration en cours..."
+    },
+    "success": {
+      "save": "Sauvegarde réussi !",
+      "archive": "Archivé avec succès ! | Archivée avec succès !",
+      "restore": "Restauré avec succès ! | Restaurée avec succès !"
+    },
+    "error": {
+      "internal": "Une erreur est survenue."
+    }
+  },
+
   "footer": {
     "rights": "{name} MAES © {start} | {name} MAES © {start} - {end}",
     "legal-notice": "Mentions légales",
     "terms-of-use": "CGU",
     "terms-of-sale": "CGV",
     "privacy": "Confidentialité"
-  },
-  "home": {
-    "hero": {
-      "title": "Développeur web full-stack",
-      "caption": "Je construis des expériences web simples, durables et percutantes."
-    },
-    "what-i-do": {
-      "title": "Je propose",
-      "features": {
-        "web-sites": {
-          "title": "Performance et adaptabilité avant tout",
-          "caption": "Des sites rapides, accessibles et fluides sur tous les supports."
-        },
-        "pwa": {
-          "title": "Applications web modernes",
-          "caption": "SaaS, PWA ou outils métiers : je conçois des apps fiables et scalables."
-        },
-        "user-based": {
-          "title": "Design pensé pour l’usage",
-          "caption": "Des interfaces simples et efficaces, centrées sur l’utilisateur."
-        },
-        "pretty-code": {
-          "title": "Code propre et durable",
-          "caption": "Un code lisible, maintenable et éthique, prêt pour la suite."
-        }
-      }
-    },
-    "featured-projects": {
-      "title": "Projets en vedette"
-    },
-    "testimonials": {
-      "title": "Témoignages"
-    },
-    "cta": {
-      "title": "Prêt à donner vie à ton projet ?",
-      "caption": [
-        "Que tu aies une idée bien définie ou simplement l’envie de créer quelque chose de solide, je suis là pour t'accompagner.",
-        "Je conçois des sites, des applications et des expériences digitales avec une attention particulière à la performance, à la clarté et à l’impact.",
-        "Tu avez un besoin précis ou juste une intuition ? Écrivons-nous. On prendra le temps de poser les bonnes bases et de réfléchir ensemble à une solution simple, efficace et sur-mesure."
-      ],
-      "action": "On se rencontre"
-    }
   },
   "terms": {
     "btn": {
@@ -186,12 +176,91 @@
       }
     }
   },
+
+  "home": {
+    "hero": {
+      "title": "Développeur web full-stack",
+      "caption": "Je construis des expériences web simples, durables et percutantes."
+    },
+    "what-i-do": {
+      "title": "Je propose",
+      "features": {
+        "web-sites": {
+          "title": "Performance et adaptabilité avant tout",
+          "caption": "Des sites rapides, accessibles et fluides sur tous les supports."
+        },
+        "pwa": {
+          "title": "Applications web modernes",
+          "caption": "SaaS, PWA ou outils métiers : je conçois des apps fiables et scalables."
+        },
+        "user-based": {
+          "title": "Design pensé pour l’usage",
+          "caption": "Des interfaces simples et efficaces, centrées sur l’utilisateur."
+        },
+        "pretty-code": {
+          "title": "Code propre et durable",
+          "caption": "Un code lisible, maintenable et éthique, prêt pour la suite."
+        }
+      }
+    },
+    "featured-projects": {
+      "title": "Projets en vedette"
+    },
+    "testimonials": {
+      "title": "Témoignages"
+    },
+    "cta": {
+      "title": "Prêt à donner vie à ton projet ?",
+      "caption": [
+        "Que tu aies une idée bien définie ou simplement l’envie de créer quelque chose de solide, je suis là pour t'accompagner.",
+        "Je conçois des sites, des applications et des expériences digitales avec une attention particulière à la performance, à la clarté et à l’impact.",
+        "Tu avez un besoin précis ou juste une intuition ? Écrivons-nous. On prendra le temps de poser les bonnes bases et de réfléchir ensemble à une solution simple, efficace et sur-mesure."
+      ],
+      "action": "On se rencontre"
+    }
+  },
+
   "admin": {
     "navigation": {
       "dashboard": "Tableau de bord",
       "service": {
         "DEFAULT": "Prestation",
         "services": "Services"
+      }
+    },
+
+    "services": {
+      "dialog": {
+        "new-title": "Nouveau service",
+        "form": {
+          "title": "Titre",
+          "caption": "Description",
+          "display": {
+            "label": "Afficher",
+            "caption": "Afficher ou non le service sur la page d'accueil."
+          }
+        }
+      },
+      "toasters": {
+        "created": "Service ajouté avec succès ! (#{id})",
+        "saved": "Service enregistré avec succès ! (#{id})",
+        "became-visible": "Service désormais visible ! (#{id})",
+        "became-invisible": "Service désormais invisible ! (#{id})"
+      },
+      "table": {
+        "headers": {
+          "title": "Titre",
+          "caption": "Description",
+          "status": "Status"
+        },
+        "actions": {
+          "edit": "Configurer",
+          "display": "Montrer à l'utilisateur",
+          "hide": "Cacher à l'utilisateur",
+          "archive": "Archiver",
+          "restore": "Restaurer",
+          "permanently-delete": "Supprimer définitivement"
+        }
       }
     }
   }

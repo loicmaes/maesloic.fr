@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import "vue-sonner/style.css";
 import AdminSidebar from "~/components/shared/layout/admin/AdminSidebar.vue";
 import BottomBar from "~/components/shared/layout/BottomBar.vue";
 
@@ -23,7 +24,7 @@ const pageName = computed(() => useRoute().meta.displayName ?? "Dashboard");
             </div>
           </header>
 
-          <div class="flex-1 min-h-[200dvh] p-4">
+          <div class="flex-1 p-4">
             <NuxtPage />
           </div>
 
@@ -31,5 +32,11 @@ const pageName = computed(() => useRoute().meta.displayName ?? "Dashboard");
         </div>
       </SidebarInset>
     </SidebarProvider>
+
+    <Toaster
+      position="bottom-left"
+      close-button
+      rich-colors
+    />
   </div>
 </template>

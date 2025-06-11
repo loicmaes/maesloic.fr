@@ -61,7 +61,10 @@ const useAdminLink = (path: string) => `/admin/${useRoute().params.key}/${path.s
         <SidebarMenu v-if="group.type === 'item'">
           <SidebarMenuItem>
             <SidebarMenuButton as-child>
-              <NuxtLinkLocale :to="useAdminLink(group.to)">
+              <NuxtLinkLocale
+                :to="useAdminLink(group.to)"
+                active-class="!bg-sidebar-accent !text-sidebar-accent-foreground"
+              >
                 <component :is="group.icon" />
                 {{ $t(`admin.navigation.${group.label}`) }}
               </NuxtLinkLocale>
@@ -79,7 +82,10 @@ const useAdminLink = (path: string) => `/admin/${useRoute().params.key}/${path.s
               :key="item.label"
             >
               <SidebarMenuButton as-child>
-                <NuxtLinkLocale :to="useAdminLink(item.to)">
+                <NuxtLinkLocale
+                  :to="useAdminLink(item.to)"
+                  active-class="!bg-sidebar-accent !text-sidebar-accent-foreground"
+                >
                   <component :is="item.icon" />
                   {{ $t(`admin.navigation.${group.label}.${item.label}`) }}
                 </NuxtLinkLocale>

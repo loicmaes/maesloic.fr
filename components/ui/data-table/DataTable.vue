@@ -1,11 +1,17 @@
 <script setup lang="ts" generic="TData, TValue">
-import { type ColumnDef, FlexRender, type Table } from "@tanstack/vue-table";
+import { type ColumnDef, FlexRender, getCoreRowModel, type Table, useVueTable } from "@tanstack/vue-table";
 
-defineProps<{
-  table: Table<unknown>;
+const props = defineProps<{
+  table?: Table<TData>;
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
 }>();
+
+const table = computed(() => props.table ?? useVueTable({
+  get data() { return props.data; },
+  get columns() { return props.columns; },
+  getCoreRowModel: getCoreRowModel(),
+}));
 </script>
 
 <template>
