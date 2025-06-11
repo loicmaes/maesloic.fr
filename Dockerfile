@@ -15,4 +15,4 @@ COPY . .
 ENV NODE_ENV=production
 RUN yarn build
 
-CMD npx prisma migrate deploy && node .output/server/index.mjs
+CMD yarn db:deploy && yarn db:seed && node .output/server/index.mjs
