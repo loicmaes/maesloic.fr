@@ -14,17 +14,17 @@ export const columns = (): ColumnDef<IProject>[] => {
     },
     {
       id: "title",
-      header: () => h("div", "Title"),
+      header: () => h("div", t("admin.projects.table.headers.title")),
       cell: ({ row }) => h("div", row.original.title[locale.value]),
     },
     {
       id: "caption",
-      header: () => h("div", "Caption"),
+      header: () => h("div", t("admin.projects.table.headers.caption")),
       cell: ({ row }) => h("div", { class: "text-muted-foreground" }, row.original.caption[locale.value]),
     },
     {
       id: "state",
-      header: () => h("div", "Status"),
+      header: () => h("div", t("admin.projects.table.headers.status")),
       cell: ({ row }) => {
         if (row.original.archivedAt) return h("div", h(Badge, { variant: "destructive" }, t("labels.archived", 1)));
         return h("div", h(Badge, { variant: row.original.draft ? "outline" : "secondary" }, t(`labels.${row.original.draft ? "draft" : "published"}`)));
@@ -32,7 +32,7 @@ export const columns = (): ColumnDef<IProject>[] => {
     },
     {
       id: "last-update",
-      header: () => h("div", "Dernière mise à jour"),
+      header: () => h("div", t("admin.projects.table.headers.last-update")),
       cell: ({ row }) => h("div", { class: "text-muted-foreground" }, Intl.DateTimeFormat(locale.value, {
         dateStyle: "long",
         timeStyle: "short",

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { MoreVertical, CircleDashed, CloudUpload, Pen, Archive, ArchiveRestore, Trash, Eye } from "lucide-vue-next";
+import { MoreVertical, CircleDashed, CloudUpload, Pen, Archive, ArchiveRestore, Trash, Eye, Wrench } from "lucide-vue-next";
 import type { IProject } from "~/types/projects";
 import ProjectDialog from "~/components/specific/projects/dialogs/ProjectDialog.vue";
 
@@ -38,6 +38,12 @@ const restore = () => store.restoreProject(props.project.id);
               <DropdownMenuItem @click="editOpen = true">
                 <Pen />
                 {{ $t("btn.edit") }}
+              </DropdownMenuItem>
+              <DropdownMenuItem as-child>
+                <NuxtLinkLocale :to="`/admin/${useAdminStore().key}/projects/${project.id}/build`">
+                  <Wrench />
+                  {{ $t("admin.projects.table.actions.build") }}
+                </NuxtLinkLocale>
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />

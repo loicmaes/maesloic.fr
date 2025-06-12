@@ -286,6 +286,17 @@
           "caption": "Description",
           "tags": "Mots clés"
         }
+      },
+      "table": {
+        "headers": {
+          "title": "Titre",
+          "caption": "Description",
+          "status": "Status",
+          "last-update": "Dernière mise à jour"
+        },
+        "actions": {
+          "build": "Construire"
+        }
       }
     }
   }

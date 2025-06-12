@@ -118,7 +118,11 @@ export const useProjectsStore = defineStore("projects", {
         error: () => "Error!",
       });
     },
-    async selectProject(id: number) {
+    async selectProject(id?: number) {
+      if (!id) {
+        this.selectedProject = null;
+        return true;
+      }
       if (this.selectedProject?.id === id) return true;
 
       try {
