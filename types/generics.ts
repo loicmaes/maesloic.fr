@@ -1,6 +1,7 @@
 import type { H3Event } from "h3";
 
 export type TNullable<T> = T | null;
+export type TArray<T> = T[];
 export type Translation = { [key: string]: string };
 
 export type HttpEvent = H3Event<Request>;

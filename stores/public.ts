@@ -1,8 +1,9 @@
 import type { IService } from "~/types/services";
+import type { TArray } from "~/types/generics";
 
 interface PublicStore {
   // Services
-  services: IService[];
+  services: TArray<IService>;
   loadingServices: boolean;
   // Projects
   projects: [];

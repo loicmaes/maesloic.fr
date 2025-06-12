@@ -1,9 +1,10 @@
 import { toast } from "vue-sonner";
 import type { IService, IServiceCreate, IServiceUpdate } from "~/types/services";
 import type { AdminListReturn } from "~/types/admin/list";
+import type { TArray } from "~/types/generics";
 
 interface AdminServicesState {
-  services: IService[];
+  services: TArray<IService>;
   loading: {
     dataUpdate: boolean;
     fetch: boolean;
