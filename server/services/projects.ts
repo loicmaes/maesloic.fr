@@ -9,7 +9,6 @@ import {
   getPublishedProjects,
   updateProject,
 } from "~/server/repositories/projects";
-import type { AdminListQuery } from "~/types/admin/list";
 import { getAdminListQuery } from "~/server/services/admin";
 
 export async function addProject(event: HttpEvent) {

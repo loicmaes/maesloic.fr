@@ -12,9 +12,10 @@ const icons = useAvailableIcons();
 
 const open = defineModel<boolean>("open");
 watch(open, (val) => {
-  setTimeout(() => {
-    if (!editMode.value) return;
+  if (!editMode.value) return;
 
+  form.resetForm();
+  setTimeout(() => {
     if (val) form.validate();
     else form.resetForm();
   }, 10);
@@ -44,22 +45,20 @@ const form = useForm({
   },
 });
 const submit = form.handleSubmit(async (values) => {
-  if (editMode.value) await saveService(values);
-  else await createService({ ...values, icon: "Home", displayed: values.displayed ?? false });
+  const keepOpen = editMode.value
+    ? await saveService(values)
+    : await createService({ ...values, icon: "Home", displayed: values.displayed ?? false });
+  open.value = !keepOpen;
 });
 
 const store = useServicesStore();
 async function saveService(data: IServiceUpdate) {
   if (!props.service) return;
-
-  const keepOpen = await store.editService(props.service.id, data);
-  open.value = !keepOpen;
+  return await store.editService(props.service.id, data);
 }
 async function createService(data: IServiceCreate) {
   if (props.service) return;
-
-  const keepOpen = await store.createService(data);
-  open.value = !keepOpen;
+  return await store.createService(data);
 }
 </script>
 

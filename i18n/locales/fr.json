@@ -4,6 +4,8 @@
     "displayed": "Affiché | Affichée",
     "hidden": "Caché | Cachée",
     "archived": "Archivé | Archivée",
+    "published": "Publié | Publiée",
+    "draft": "Brouillon",
     "languages": {
       "fr": "Français"
     }
@@ -14,7 +16,14 @@
   "btn": {
     "save": "Enregistrer",
     "new": "Nouveau",
-    "add": "Ajouter"
+    "add": "Ajouter",
+    "edit": "Configurer",
+    "archive": "Archiver",
+    "restore": "Restaurer",
+    "publish": "Publier",
+    "preview": "Prévisualiser",
+    "convert-to-draft": "Convertir en brouillon",
+    "permanently-delete": "Supprimer définitivement"
   },
   "navigation": {
     "home": "Accueil",
@@ -266,7 +275,18 @@
       }
     },
     "projects": {
-      "title": "Projets"
+      "title": "Projets",
+      "btn": {
+        "see-project": "Voir la fiche"
+      },
+      "dialog": {
+        "new-title": "Nouveau projet",
+        "form": {
+          "title": "Titre",
+          "caption": "Description",
+          "tags": "Mots clés"
+        }
+      }
     }
   }
 }
