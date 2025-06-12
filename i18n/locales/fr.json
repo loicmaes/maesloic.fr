@@ -223,8 +223,8 @@
   "admin": {
     "navigation": {
       "dashboard": "Tableau de bord",
-      "service": {
-        "DEFAULT": "Prestation",
+      "interface": {
+        "DEFAULT": "Interface",
         "services": "Services"
       }
     },
