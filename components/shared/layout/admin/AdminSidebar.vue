@@ -27,7 +27,7 @@ const navigation: (Group | Item)[] = [
   },
   {
     type: "group",
-    label: "service",
+    label: "interface",
     children: [
       {
         type: "item",
