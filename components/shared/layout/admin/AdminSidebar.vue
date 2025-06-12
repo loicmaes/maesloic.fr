@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SwatchBook, LayoutDashboard, LockKeyhole, type LucideIcon } from "lucide-vue-next";
+import { SwatchBook, LayoutDashboard, LockKeyhole, type LucideIcon, LibraryBig } from "lucide-vue-next";
 
 interface Group {
   type: "group";
@@ -34,6 +34,12 @@ const navigation: (Group | Item)[] = [
         label: "services",
         to: "/services",
         icon: SwatchBook,
+      },
+      {
+        type: "item",
+        label: "projects",
+        to: "/projects",
+        icon: LibraryBig,
       },
     ],
   },

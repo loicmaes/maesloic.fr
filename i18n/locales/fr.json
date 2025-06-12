@@ -225,7 +225,8 @@
       "dashboard": "Tableau de bord",
       "interface": {
         "DEFAULT": "Interface",
-        "services": "Services"
+        "services": "Services",
+        "projects": "Projets"
       }
     },
 
@@ -263,6 +264,9 @@
           "permanently-delete": "Supprimer définitivement"
         }
       }
+    },
+    "projects": {
+      "title": "Projets"
     }
   }
 }
