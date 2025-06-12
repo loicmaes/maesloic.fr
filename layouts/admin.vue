@@ -3,7 +3,9 @@ import "vue-sonner/style.css";
 import AdminSidebar from "~/components/shared/layout/admin/AdminSidebar.vue";
 import BottomBar from "~/components/shared/layout/BottomBar.vue";
 
-const pageName = computed(() => useRoute().meta.displayName ?? "Dashboard");
+const { t } = useI18n();
+
+const pageName = computed(() => t(useRoute().meta.displayName as string ?? "Dashboard"));
 </script>
 
 <template>

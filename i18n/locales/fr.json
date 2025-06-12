@@ -230,6 +230,7 @@
     },
 
     "services": {
+      "title": "Services",
       "dialog": {
         "new-title": "Nouveau service",
         "form": {

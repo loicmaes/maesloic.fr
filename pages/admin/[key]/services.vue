@@ -5,6 +5,7 @@ import ServiceDialog from "~/components/specific/features/dialogs/ServiceDialog.
 
 definePageMeta({
   layout: "admin",
+  displayName: "admin.services.title",
 });
 
 const store = useServicesStore();
