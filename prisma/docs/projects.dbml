@@ -1,0 +1,15 @@
+Table Project {
+  id int pk
+  title string
+  caption string
+  thumbnail string [null]
+  tags string[]
+
+  content string
+  previewLink string [null]
+  productionLink string []
+  draft boolean [default: true]
+
+  createdAt datetime
+  updatedAt datetime
+}

@@ -16,3 +16,17 @@ model Service {
   displayed  Boolean   @default(false)
   archivedAt DateTime?
 }
+
+model Project {
+  id             Int      @id @default(autoincrement())
+  title          String
+  caption        String
+  thumbnail      String?
+  tags           String[] @default([])
+  content        String
+  previewLink    String?
+  productionLink String?
+  draft          Boolean  @default(true)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
