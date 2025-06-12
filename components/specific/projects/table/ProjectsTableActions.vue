@@ -33,24 +33,28 @@ const restore = () => store.restoreProject(props.project.id);
 
       <DropdownMenuContent align="end">
         <template v-if="!project.archivedAt">
-          <DropdownMenuGroup v-if="project.draft">
-            <DropdownMenuItem @click="editOpen = true">
-              <Pen />
-              {{ $t("btn.edit") }}
-            </DropdownMenuItem>
-            <DropdownMenuItem disabled>
+          <template v-if="project.draft">
+            <DropdownMenuGroup>
+              <DropdownMenuItem @click="editOpen = true">
+                <Pen />
+                {{ $t("btn.edit") }}
+              </DropdownMenuItem>
+            </DropdownMenuGroup>
+            <DropdownMenuSeparator />
+          </template>
+          <DropdownMenuGroup>
+            <DropdownMenuItem
+              v-if="project.draft"
+              disabled
+            >
               <Eye />
               {{ $t("btn.preview") }}
             </DropdownMenuItem>
-          </DropdownMenuGroup>
-          <DropdownMenuGroup v-else>
-            <DropdownMenuItem>
+            <DropdownMenuItem v-else>
               <Eye />
               {{ $t("admin.projects.btn.see-project") }}
             </DropdownMenuItem>
-          </DropdownMenuGroup>
-          <DropdownMenuSeparator />
-          <DropdownMenuGroup>
+
             <DropdownMenuItem @click="handlePublicChanges">
               <CloudUpload v-if="project.draft" />
               <CircleDashed v-else />
