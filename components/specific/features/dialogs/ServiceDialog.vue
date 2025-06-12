@@ -3,7 +3,6 @@ import { toTypedSchema } from "@vee-validate/zod";
 import { z } from "zod";
 import { useForm } from "vee-validate";
 import { Save, Plus, LoaderCircle } from "lucide-vue-next";
-import { useVirtualList } from "@vueuse/core";
 import type { IService, IServiceCreate, IServiceUpdate } from "~/types/services";
 import Icon from "~/components/shared/icons/Icon.vue";
 
