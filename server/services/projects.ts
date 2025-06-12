@@ -10,6 +10,7 @@ import {
   updateProject,
 } from "~/server/repositories/projects";
 import type { AdminListQuery } from "~/types/admin/list";
+import { getAdminListQuery } from "~/server/services/admin";
 
 export async function addProject(event: HttpEvent) {
   const body = await readBody<IProjectCreate>(event);
@@ -63,7 +64,7 @@ export async function recoverPublicProjectsList(event: HttpEvent) {
 }
 
 export async function recoverAdminProjectsList(event: HttpEvent) {
-  const query = getQuery<AdminListQuery>(event);
+  const query = getAdminListQuery(event);
 
   try {
     const projects = await getAllProjects(query);

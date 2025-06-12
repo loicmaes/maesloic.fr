@@ -4,9 +4,11 @@ import type { TArray } from "~/types/generics";
 import { LmNotFoundError } from "~/types/generics";
 import type { AdminListQuery, AdminListReturn } from "~/types/admin/list";
 
-export type ProjectDataBody = Omit<IProject, "content"> & { content: string };
+export type ProjectDataBody = Omit<IProject, "content" | "title" | "caption"> & { content: string; title: string; caption: string };
 const parseProject = (initial: ProjectDataBody): IProject => ({
   ...initial,
+  title: JSON.parse(initial.title),
+  caption: JSON.parse(initial.caption),
   content: JSON.parse(initial.content) as IProjectContent,
 });
 
@@ -14,6 +16,8 @@ export async function createProject(data: IProjectCreate): Promise<IProject> {
   return parseProject(await prisma.project.create({
     data: {
       ...data,
+      title: JSON.stringify(data.title),
+      caption: JSON.stringify(data.caption),
       content: JSON.stringify(data.content),
     },
   }));
@@ -22,6 +26,8 @@ export async function updateProject(id: number, data: IProjectUpdate): Promise<I
   if (!await exists(id)) throw new LmNotFoundError(`Project not found! (#${id})`);
 
   const body = { ...data } as unknown as ProjectDataBody;
+  if (body.title) body.title = JSON.stringify(body.title);
+  if (body.caption) body.caption = JSON.stringify(body.caption);
   if (body.content) body.content = JSON.stringify(body.content);
 
   return parseProject(await prisma.project.update({

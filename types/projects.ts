@@ -1,10 +1,10 @@
-import type { TNullable } from "~/types/generics";
+import type { TNullable, Translation } from "~/types/generics";
 
 export type IProjectContent = IProjectContentEntity[];
 export interface IProject {
   id: number;
-  title: string;
-  caption: string;
+  title: Translation;
+  caption: Translation;
   thumbnail?: TNullable<string>;
   tags: string[];
   content: IProjectContent;
@@ -26,12 +26,12 @@ export interface IProjectContentEntity {
 }
 export interface IProjectParagraph extends IProjectContentEntity {
   type: "paragraph";
-  content: string;
+  content: Translation;
 }
 export interface IProjectTitle extends IProjectContentEntity {
   type: "title";
   level: 1 | 2 | 3 | 4 | 5 | 6;
-  content: string;
+  content: Translation;
 }
 export interface IProjectImage extends IProjectContentEntity {
   type: "image";
