@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type { IProject } from "~/types/projects";
-
-const { locale } = useI18n();
+import Wysiwyg from "~/components/shared/wysiwyg/Wysiwyg.vue";
 
 definePageMeta({
   layout: "empty",
@@ -13,7 +12,10 @@ const project = computed(() => selectedProject.value as IProject);
 </script>
 
 <template>
-  <main data-page="admin.build-project">
-    {{ project.title[locale] }}
+  <main
+    data-page="admin.build-project"
+    class="p-8 grid gap-8"
+  >
+    <Wysiwyg :content="project.content" />
   </main>
 </template>

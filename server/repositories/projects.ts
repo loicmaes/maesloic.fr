@@ -1,15 +1,16 @@
-import type { IProject, IProjectContent, IProjectCreate, IProjectUpdate } from "~/types/projects";
+import type { IProject, IProjectCreate, IProjectUpdate } from "~/types/projects";
 import prisma from "~/prisma";
 import type { TArray } from "~/types/generics";
 import { LmNotFoundError } from "~/types/generics";
 import type { AdminListQuery, AdminListReturn } from "~/types/admin/list";
+import type { IWysiwygContent } from "~/types/wysiwyg";
 
 export type ProjectDataBody = Omit<IProject, "content" | "title" | "caption"> & { content: string; title: string; caption: string };
 const parseProject = (initial: ProjectDataBody): IProject => ({
   ...initial,
   title: JSON.parse(initial.title),
   caption: JSON.parse(initial.caption),
-  content: JSON.parse(initial.content) as IProjectContent,
+  content: JSON.parse(initial.content) as IWysiwygContent,
 });
 
 export async function createProject(data: IProjectCreate): Promise<IProject> {

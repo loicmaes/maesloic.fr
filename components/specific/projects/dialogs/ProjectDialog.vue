@@ -45,7 +45,12 @@ const submit = form.handleSubmit(async (values) => {
     ? await save(values)
     : await create({
         ...values,
-        content: [],
+        content: {
+          options: {
+            fullWidth: false,
+          },
+          blocks: [],
+        },
       });
   open.value = !keepOpen;
 });
