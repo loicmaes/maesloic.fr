@@ -10,6 +10,7 @@
   },
   "packageManager": "yarn@1.22.22",
   "scripts": {
+    "start": "node .output/server/index.mjs",
     "build": "nuxt build --host",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
